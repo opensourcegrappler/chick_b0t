@@ -61,7 +61,7 @@ outdir = "image/"
 
 
 # What model to use.
-MODEL_NAME = 'models/coop_graph'
+MODEL_NAME = 'coop_graph'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'

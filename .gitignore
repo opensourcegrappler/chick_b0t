@@ -1,4 +1,6 @@
 *~
+*.pyc
 models/*
 id_file
 cronjob.sh
+config.py

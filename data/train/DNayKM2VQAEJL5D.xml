@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>DNayKM2VQAEJL5D.jpg</filename>
+	<path>/home/smh/Documents/mlearning/download_chickenpi/models/research/object_detection/images/train/DNayKM2VQAEJL5D.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>493</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>egg</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>911</xmin>
+			<ymin>326</ymin>
+			<xmax>993</xmax>
+			<ymax>402</ymax>
+		</bndbox>
+	</object>
+</annotation>

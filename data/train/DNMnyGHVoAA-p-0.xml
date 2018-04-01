@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>DNMnyGHVoAA-p-0.jpg</filename>
+	<path>/home/smh/Documents/mlearning/download_chickenpi/models/research/object_detection/images/train/DNMnyGHVoAA-p-0.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>493</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hen</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>268</xmin>
+			<ymin>112</ymin>
+			<xmax>649</xmax>
+			<ymax>438</ymax>
+		</bndbox>
+	</object>
+</annotation>

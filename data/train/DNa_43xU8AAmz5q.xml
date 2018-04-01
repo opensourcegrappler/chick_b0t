@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>DNa_43xU8AAmz5q.jpg</filename>
+	<path>/home/smh/Documents/mlearning/download_chickenpi/models/research/object_detection/images/train/DNa_43xU8AAmz5q.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>493</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hen</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>753</xmin>
+			<ymin>98</ymin>
+			<xmax>1194</xmax>
+			<ymax>443</ymax>
+		</bndbox>
+	</object>
+</annotation>

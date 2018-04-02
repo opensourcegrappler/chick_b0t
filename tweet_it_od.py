@@ -28,6 +28,7 @@ if tf.__version__ < '1.4.0':
 
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
+#this needs to be done after the utils import above to avoid some backend error
 from matplotlib import pyplot as plt
 
 def tweet(eggcount,hencount,imagepath,status_id):

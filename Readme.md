@@ -34,7 +34,7 @@ There are three python scripts in this project:
 ### get_images.py
 
 This script downloads images from a given twitter feed. The images are
-used in this project to for object detection of eggs and hens.
+used in this project as a dataset for object detection of eggs and hens.
 
 Todo: this script needs some tidy up.
 

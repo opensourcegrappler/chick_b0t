@@ -19,13 +19,13 @@ Other dependencies:
 The scripts in this project will require that you create you own
 config.py for holding twitter api keys. Here is an example:
 
-'''
+```
 consumer_key = YOUR_KEY
 consumer_secret = YOUR_SECRET
 access_token = YOUR_ACCESS_TOKEN
 access_secret = YOUR_ACCESS_SECRET
 twitter_user = TARGET_TWITTER_USER
-'''
+```
 
 ## Code
 
@@ -40,9 +40,9 @@ Todo: this script needs some tidy up.
 
 #### Use:
 
-'''
+```
 python get_images.py
-'''
+```
 
 ### make_tfrecord.py
 
@@ -53,9 +53,9 @@ bounding boxes for the eggs and hens.
 
 #### Use:
 
-'''
-     python make_tfrecord.py --output_path=/path/to/outfile.record
-'''
+```
+python make_tfrecord.py --output_path=/path/to/outfile.record
+```
 
 ### tweet_it_od.py
 
@@ -66,9 +66,9 @@ original tweet.
 
 #### Use:
 
-'''
+```
 python tweet_it_od.py
-'''
+```
 
 ## Data
 

@@ -6,6 +6,7 @@ import config
 import tweepy
 import wget
 import pathlib
+import datetime
 
 import numpy as np
 import os
@@ -33,20 +34,30 @@ from matplotlib import pyplot as plt
 
 def tweet(eggcount,hencount,imagepath,status_id):
 
-  if eggcount==1:
-    eggs = "Egg"
-  else:
-    eggs = "Eggs"
+  hencount_text = 'nan' if hencount == 0 else hencount
 
-  if hencount==1:
-    hens = "Hen"
-  else:
-    hens = "Hens"
+  with open("counts.dat","a+") as fh:
+
+    lines = fh.readlines()
+    prev_eggcount = lines[-1].split(" ")[-2].rstrip()
+
+    #eggcount from previous hour is used if
+    #eggcount is less than last hour and a hen is present (hen is blocking egg view)
+    #otherwise just use what is seen in the image
+    eggcount_text = prev_eggcount if eggcount<prev_eggcount and hencount>0 else eggcount
+
+    data = "\n{}:00 {} {}".format(datetime.datetime.now().hour,
+                                eggcount_text,
+                                hencount_text)
+    fh.write(data)
+
+  eggs = "Egg" if eggcount==1 else "Eggs"
+  hens = "Hen" if hencount==1 else "Hens"
 
   if eggcount==0 and hencount==0:
     return
   else:
-    api.update_with_media(imagepath,status="@{} {} {} and {} {}".format(config.twitter_user,eggcount,eggs,hencount,hens),in_reply_to_status_id=status_id)
+    api.update_with_media(imagepath,status="@{} {} {} and {} {} #twitterbot #eggs #hens #coop #ai #machinelearning".format(config.twitter_user,eggcount,eggs,hencount,hens),in_reply_to_status_id=status_id)
   return
 
 auth = tweepy.OAuthHandler(config.consumer_key,config.consumer_secret)

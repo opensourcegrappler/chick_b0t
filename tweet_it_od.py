@@ -34,12 +34,19 @@ from matplotlib import pyplot as plt
 
 def tweet(eggcount,hencount,imagepath,status_id):
 
+  #zero hens is nan, looks cleaner when plotted in daily egg tally
   hencount_text = 'nan' if hencount == 0 else hencount
 
+  #open count file for appending, create if doesn't exist
   with open("counts.dat","a+") as fh:
 
     lines = fh.readlines()
-    prev_eggcount = lines[-1].split(" ")[-2].rstrip()
+
+    #read the last line of file, 0 if no lines yet
+    try:
+      prev_eggcount = lines[-1].split(" ")[-2].rstrip()
+    except:
+      prev_eggcount = 0
 
     #eggcount from previous hour is used if
     #eggcount is less than last hour and a hen is present (hen is blocking egg view)
@@ -57,7 +64,8 @@ def tweet(eggcount,hencount,imagepath,status_id):
   if eggcount==0 and hencount==0:
     return
   else:
-    api.update_with_media(imagepath,status="@{} {} {} and {} {} #twitterbot #eggs #hens #coop #ai #machinelearning".format(config.twitter_user,eggcount,eggs,hencount,hens),in_reply_to_status_id=status_id)
+    api.update_with_media(imagepath,status="@{} {} {} and {} {} #twitterbot #eggs #hens #chickens #coop #ai #machinelearning"\
+                          .format(config.twitter_user,eggcount,eggs,hencount,hens),in_reply_to_status_id=status_id)
   return
 
 auth = tweepy.OAuthHandler(config.consumer_key,config.consumer_secret)

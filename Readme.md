@@ -8,10 +8,12 @@ A Twitter bot for finding eggs and hens in your chicken coop.
 
 Install the Tensorflow models repository inside the top level of this
 project.
-* [TensorFlow Models](https://github.com/tensorflow/models) - Follow the installation instructions for that project.
+* [TensorFlow Models](https://github.com/tensorflow/models) - Follow the installation instructions for that project in the object detection directory.
 
 Other dependencies:
 * Tweepy
+* Wget
+* Pathlib
 * todo document the rest of the dependencies
 
 ### Configuration

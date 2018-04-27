@@ -74,7 +74,7 @@ auth.set_access_token(config.access_token,config.access_secret)
 api = tweepy.API(auth)
 
 tweets = api.user_timeline(screen_name=config.twitter_user,
-                           count=1, include_rts=False,
+                           count=2, include_rts=False,
                            exclude_replies=True)
 
 outdir = "image/"
@@ -154,7 +154,7 @@ def run_inference_for_single_image(image, graph):
     return output_dict
 
 statusid = ''
-for status in tweets:
+for status in reversed(tweets):
     
     media = status.entities.get('media',[])
     
@@ -174,7 +174,7 @@ for status in tweets:
         if str(last_id) == str(status.id):
             print "same as last image"
             os.system("rm image/*")
-            exit()
+            continue
 
     image_path = "{}{}".format(outdir,imagename)
 

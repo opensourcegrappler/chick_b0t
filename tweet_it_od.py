@@ -35,7 +35,7 @@ from matplotlib import pyplot as plt
 def tweet(eggcount,hencount,imagepath,status_id):
 
   #zero hens is nan, looks cleaner when plotted in daily egg tally
-  hencount_text = 'nan' if hencount == 0 else hencount
+  hencount_text = -1 if hencount == 0 else hencount
 
   #open count file for appending, create if doesn't exist
   with open("counts.dat","a+") as fh:

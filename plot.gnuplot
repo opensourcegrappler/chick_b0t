@@ -17,6 +17,8 @@ max(x, y) = (x > y ? x : y)
 
 ymax = max(eggs_max,hens_max)
 
+if (ymax<1) {exit}
+
 set ytics 1
 set xlabel "Time"
 set yrange [0:ymax+0.5]
